@@ -1,3 +1,23 @@
-<mat-toolbar color="primary">
-  <span>My Application</span>
-</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav
+    [mode]="sidenavMode"
+    [opened]="!isSmallScreen"
+    [fixedInViewport]="true"
+  ></mat-sidenav>
+  <mat-toolbar color="primary">
+    <button mat-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    Angular Material
+  </mat-toolbar>
+</mat-sidenav-container>
+<button
+  *ngIf="isSmallScreen"
+  mat-mini-fab
+  color="primary"
+  class="sidenav-toggle"
+  (click)="sidenav.toggle()"
+>
+  <mat-icon>view_list</mat-icon>
+</button>

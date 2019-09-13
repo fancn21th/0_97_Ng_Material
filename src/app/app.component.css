@@ -1,0 +1,16 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+mat-sidenav {
+  width: 300px;
+  border: 1px solid red;
+}
+
+.sidenav-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  z-index: 4;
+}
