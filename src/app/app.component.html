@@ -4,7 +4,9 @@
     [mode]="sidenavMode"
     [opened]="!isSmallScreen"
     [fixedInViewport]="true"
-  ></mat-sidenav>
+  >
+    <app-toolbar></app-toolbar>
+  </mat-sidenav>
   <mat-toolbar color="primary">
     <button mat-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
